@@ -1,0 +1,147 @@
+/* Body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* Sidebar, planner, and properties styling */
+.sidebar, .planner, .properties {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    flex: 1;
+}
+
+/* Planner styling */
+.planner {
+    background-color: #f2f2f2;
+    min-height: 600px; /* Ensure planner has some height */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Component styling */
+.sidebar .component {
+    margin-bottom: 10px; /* Add spacing between components */
+    background-color: white; /* Ensure components have a white background */
+    padding: 10px; /* Add padding for visual separation */
+    border: 1px solid #ccc; /* Add a border for visual distinction */
+    border-radius: 5px; /* Add rounded corners for a modern look */
+    cursor: pointer; /* Change cursor to pointer when hovering over components */
+
+}
+
+.planner .component-wrapper {
+    background-color: white; /* Ensure components have a white background */
+    padding: 10px; /* Add padding for visual separation */
+    border: 1px solid #ccc; /* Add a border for visual distinction */
+    border-radius: 5px; /* Add rounded corners for a modern look */
+    cursor: pointer; /* Change cursor to pointer when hovering over components */
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.planner .component-wrapper.selected{
+    background-color: lightblue;
+}
+
+.planner{
+    width: 350px;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+/* Dragging component styling */
+.component.dragging {
+    opacity: 0.5; /* Reduce opacity when dragging */
+}
+
+.properties .property-details{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.properties label{
+    display: block;
+}
+
+.properties .checkbox-container{
+    display: flex;
+}
+
+.properties .form-control{
+    display: flex;
+    flex-direction: column;
+}
+
+.properties .form-check{
+    display: flex;
+}
+/* Button styling */
+button {
+    margin-top: 20px; /* Add margin to separate from other elements */
+    padding: 10px 20px; /* Add padding for button size */
+    font-size: 16px; /* Set button font size */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.multi-checkbox > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-wrapper {
+    width: 350px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.image-wrapper input[type="file"] {
+    display: none;
+}
+.planner .component {
+    transition: all 0.2s ease-in-out; /* Add a smooth transition */
+}
+
+.planner .component.dragging-over {
+    transform: translateY(20px); /* Adjust the amount as per your design */
+}
+
+.planner .component.shifting-down{
+    transform: translateY(20px); /* Adjust the amount as per your design */
+}
+.planner .component.form-input input, .planner .component.form-input label{
+    pointer-events: none !important;
+}
+
+.image-wrapper img {
+    display: none;
+    max-width: 350px !important;
+    max-height: 100%;
+    pointer-events: none;
+}
+
+.image-wrapper img {
+    display: none;
+    max-width: 100%;
+    max-height: 100%;
+}
